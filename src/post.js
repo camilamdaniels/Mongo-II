@@ -11,44 +11,41 @@ mongoose.connect('mongodb://localhost/so-posts', { useMongoClient: true });
 const PostSchema = new mongoose.Schema({
   soID: {
     type: Number,
-    required: true,
+    required: true
   },
   parentID: {
-    type: Number,
+    type: Number
   },
   url: {
     type: String,
-    required: true,
+    required: true
   },
   title: {
-    type: String,
+    type: String
   },
   body: {
     type: String,
-    required: true,
+    required: true
   },
   score: {
     type: Number,
-    required: true,
+    required: true
   },
   tags: {
-    type: Array,
+    type: Array
   },
   acceptedAnswerID: {
     type: Number
   },
   user: {
     soUserID: {
-      type: Number,
-      required: true,
+      type: Number
     },
     name: {
-      type: String,
-      required: true,
+      type: String
     },
     reputation: {
-      type: Number,
-      required: true,
+      type: Number
     }
   }
 });
